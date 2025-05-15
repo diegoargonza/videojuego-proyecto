@@ -10,13 +10,10 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	# Handle jump.
+	
+	# Handle jump input.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-		if velocity.y < 0:
-			$AnimatedSprite2D.play("salto")
-		else: 
-			$AnimatedSprite2D.play("salto")
 	 
 
 	# Get the input direction and handle the movement/deceleration.
@@ -35,5 +32,14 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		if is_on_floor():
 			$AnimatedSprite2D.play("Inicio")
+			
+			
+	# ANIMACIÓN
+	if not is_on_floor():
+		$AnimatedSprite2D.play("salto")
+	elif direction:
+		$AnimatedSprite2D.play("derecha")
+	else:
+		$AnimatedSprite2D.play("Inicio")
 
 	move_and_slide()

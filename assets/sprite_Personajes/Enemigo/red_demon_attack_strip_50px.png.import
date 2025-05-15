@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7yc53yn3ymtg"
-path="res://.godot/imported/Sprite-salto1.png-29d83ec80efe76378cdac08b56fd3c9a.ctex"
+uid="uid://bbvu1ntpt4k88"
+path="res://.godot/imported/red_demon_attack_strip_50px.png-b975d13a5250059694f5dca1fa7923c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprite_Personajes/Sprite-salto1.png"
-dest_files=["res://.godot/imported/Sprite-salto1.png-29d83ec80efe76378cdac08b56fd3c9a.ctex"]
+source_file="res://assets/sprite_Personajes/Enemigo/red_demon_attack_strip_50px.png"
+dest_files=["res://.godot/imported/red_demon_attack_strip_50px.png-b975d13a5250059694f5dca1fa7923c8.ctex"]
 
 [params]
 

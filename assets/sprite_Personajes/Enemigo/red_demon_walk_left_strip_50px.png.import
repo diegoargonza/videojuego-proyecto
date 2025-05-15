@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4gp3hpsvo6dg"
-path="res://.godot/imported/Sprite-statico.png-c3645464a6b7cab7677505b0f63988b4.ctex"
+uid="uid://bukxweaiuslqg"
+path="res://.godot/imported/red_demon_walk_left_strip_50px.png-c527af4615a8163f93ebf63a79815c6a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprite_Personajes/Sprite-statico.png"
-dest_files=["res://.godot/imported/Sprite-statico.png-c3645464a6b7cab7677505b0f63988b4.ctex"]
+source_file="res://assets/sprite_Personajes/Enemigo/red_demon_walk_left_strip_50px.png"
+dest_files=["res://.godot/imported/red_demon_walk_left_strip_50px.png-c527af4615a8163f93ebf63a79815c6a.ctex"]
 
 [params]
 

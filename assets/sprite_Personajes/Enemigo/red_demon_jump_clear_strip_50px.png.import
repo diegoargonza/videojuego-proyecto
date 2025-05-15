@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbgvhvn4w012l"
-path="res://.godot/imported/Sprite-izquierda.png-af31736cdbafe9d7b9b427688a5ce9d0.ctex"
+uid="uid://dccqoejmeq1jg"
+path="res://.godot/imported/red_demon_jump_clear_strip_50px.png-8f67bd62ff7d5a57e75ea193b34b0ca7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprite_Personajes/Sprite-izquierda.png"
-dest_files=["res://.godot/imported/Sprite-izquierda.png-af31736cdbafe9d7b9b427688a5ce9d0.ctex"]
+source_file="res://assets/sprite_Personajes/Enemigo/red_demon_jump_clear_strip_50px.png"
+dest_files=["res://.godot/imported/red_demon_jump_clear_strip_50px.png-8f67bd62ff7d5a57e75ea193b34b0ca7.ctex"]
 
 [params]
 
