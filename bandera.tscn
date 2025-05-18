@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8juym5yiyu88"]
+
+[ext_resource type="Texture2D" uid="uid://vqd52awux4vh" path="res://assets/objetos/bandera.png" id="1_5vta1"]
+[ext_resource type="Script" uid="uid://cujhfrbc6ax46" path="res://bandera.gd" id="2_phhtn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_phhtn"]
+size = Vector2(20, 37)
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_5vta1")
+script = ExtResource("2_phhtn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_phhtn")
