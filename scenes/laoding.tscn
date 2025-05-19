@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://eun7fl00wg1y"]
+[gd_scene load_steps=12 format=3 uid="uid://eun7fl00wg1y"]
 
 [ext_resource type="Script" uid="uid://d4lh37mrhiqn5" path="res://assets/scripts/laoding.gd" id="1_dsqi3"]
 [ext_resource type="Texture2D" uid="uid://evnbwnuo53v5" path="res://assets/fondo/Pasto1.png" id="2_4qplc"]
@@ -7,6 +7,22 @@
 [ext_resource type="Texture2D" uid="uid://cmm22w6e4xag2" path="res://assets/fondo/Pasto3.png" id="4_pxkyu"]
 [ext_resource type="Texture2D" uid="uid://btpbgh51shsxn" path="res://assets/fondo/ArbolGrande.png" id="5_lbxvv"]
 [ext_resource type="FontFile" uid="uid://bgehj2vsi6hru" path="res://assets/fonts/04B_30__.TTF" id="7_mhso4"]
+[ext_resource type="Texture2D" uid="uid://kuvli10pncmw" path="res://assets/fondo/logo.png" id="8_p0klp"]
+
+[sub_resource type="Animation" id="Animation_dsqi3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["CARGANDO"]
+}
 
 [sub_resource type="Animation" id="Animation_lbxvv"]
 resource_name = "fondoLoading"
@@ -23,21 +39,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": ["CARGANDO", "CARGANDO.", "CARGANDO..", "CARGANDO..."]
-}
-
-[sub_resource type="Animation" id="Animation_dsqi3"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Label:text")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["CARGANDO"]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dsqi3"]
@@ -111,3 +112,8 @@ movie_quit_on_finish = true
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0
 one_shot = true
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(531, 47)
+scale = Vector2(0.212769, 0.179016)
+texture = ExtResource("8_p0klp")

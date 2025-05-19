@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cbph1xeiwaevn"]
+[gd_scene load_steps=9 format=3 uid="uid://cbph1xeiwaevn"]
 
 [ext_resource type="FontFile" uid="uid://bgehj2vsi6hru" path="res://assets/fonts/04B_30__.TTF" id="1_lti8b"]
 [ext_resource type="Script" uid="uid://ddokyvgatprxm" path="res://assets/scripts/menu.gd" id="1_mae5d"]
-[ext_resource type="Texture2D" uid="uid://blgxrg868wt2c" path="res://assets/fondo/fondoMenuPrueba.png" id="1_ouk20"]
+[ext_resource type="Texture2D" uid="uid://dbs8wyovlp73x" path="res://assets/fondo/fondoMenu.png" id="2_4hy44"]
+[ext_resource type="Texture2D" uid="uid://kuvli10pncmw" path="res://assets/fondo/logo.png" id="4_ytr4m"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mae5d"]
 bg_color = Color(0.137255, 0.121569, 0.0745098, 0.72549)
@@ -38,7 +39,7 @@ color = Color(0.439805, 0.507088, 0.532453, 1)
 layout_mode = 0
 offset_right = 640.0
 offset_bottom = 482.0
-texture = ExtResource("1_ouk20")
+texture = ExtResource("2_4hy44")
 expand_mode = 5
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
@@ -70,6 +71,11 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ouk20")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ytr4m")
 text = "Salir
 "
+
+[node name="Logo" type="Sprite2D" parent="ColorRect"]
+position = Vector2(309, 224)
+scale = Vector2(0.212891, 0.223633)
+texture = ExtResource("4_ytr4m")
 
 [connection signal="pressed" from="ColorRect/VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/quit" to="." method="_on_quit_pressed"]
