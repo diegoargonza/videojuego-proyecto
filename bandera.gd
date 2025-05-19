@@ -1,10 +1,9 @@
-extends Sprite2D
+extends Area2D
 
-@onready var ui_nivel_completado = get_node("/root/Game/UI/NivelCompletadoLabel")
-
+@onready var label_completado = get_node("/root/Game/CanvasLayer/Label")
 
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("jugador"):
-		ui_nivel_completado.text = "¡Nivel completado!"
-		ui_nivel_completado.visible = true
-		queue_free() # Elimina la bandera del juego
+		label_completado.text = "¡Nivel completado!"
+		label_completado.visible = true
+		queue_free()
