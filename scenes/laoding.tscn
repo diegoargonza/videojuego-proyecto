@@ -1,0 +1,113 @@
+[gd_scene load_steps=11 format=3 uid="uid://eun7fl00wg1y"]
+
+[ext_resource type="Script" uid="uid://d4lh37mrhiqn5" path="res://assets/scripts/laoding.gd" id="1_dsqi3"]
+[ext_resource type="Texture2D" uid="uid://evnbwnuo53v5" path="res://assets/fondo/Pasto1.png" id="2_4qplc"]
+[ext_resource type="Texture2D" uid="uid://ig46pwwdpew8" path="res://assets/fondo/Fondo.png" id="2_dsqi3"]
+[ext_resource type="Texture2D" uid="uid://f3u0rm0muwuh" path="res://assets/fondo/Pasto2.png" id="3_jpc0a"]
+[ext_resource type="Texture2D" uid="uid://cmm22w6e4xag2" path="res://assets/fondo/Pasto3.png" id="4_pxkyu"]
+[ext_resource type="Texture2D" uid="uid://btpbgh51shsxn" path="res://assets/fondo/ArbolGrande.png" id="5_lbxvv"]
+[ext_resource type="FontFile" uid="uid://bgehj2vsi6hru" path="res://assets/fonts/04B_30__.TTF" id="7_mhso4"]
+
+[sub_resource type="Animation" id="Animation_lbxvv"]
+resource_name = "fondoLoading"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75, 1.64, 2.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["CARGANDO", "CARGANDO.", "CARGANDO..", "CARGANDO..."]
+}
+
+[sub_resource type="Animation" id="Animation_dsqi3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["CARGANDO"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dsqi3"]
+_data = {
+&"RESET": SubResource("Animation_dsqi3"),
+&"fondoLoading": SubResource("Animation_lbxvv")
+}
+
+[node name="loading" type="Node2D"]
+script = ExtResource("1_dsqi3")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayerFondo" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+
+[node name="FondoLoading" type="Sprite2D" parent="ParallaxBackground/ParallaxLayerFondo"]
+position = Vector2(320.5, 240)
+scale = Vector2(2.49609, 3.31944)
+texture = ExtResource("2_dsqi3")
+
+[node name="ParallaxLayerPasto1" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.4, 0.4)
+
+[node name="Pasto1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayerPasto1"]
+position = Vector2(320.5, 240)
+scale = Vector2(2.49609, 3.30556)
+texture = ExtResource("2_4qplc")
+
+[node name="ParallaxLayerPasto2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 0.6)
+
+[node name="Pasto2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayerPasto2"]
+position = Vector2(321, 240.5)
+scale = Vector2(2.5, 3.32639)
+texture = ExtResource("3_jpc0a")
+
+[node name="ParallaxLayerPasto3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 0.8)
+
+[node name="Pasto3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayerPasto3"]
+position = Vector2(321, 240)
+scale = Vector2(2.5, 3.33333)
+texture = ExtResource("4_pxkyu")
+
+[node name="ParallaxLayerArbolGrande" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 0.1)
+
+[node name="ArbolGrande" type="Sprite2D" parent="ParallaxBackground/ParallaxLayerArbolGrande"]
+position = Vector2(320.5, 239)
+scale = Vector2(2.50391, 3.33333)
+texture = ExtResource("5_lbxvv")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(321, 240)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 380.0
+offset_top = 451.0
+offset_right = 471.0
+offset_bottom = 474.0
+theme_override_fonts/font = ExtResource("7_mhso4")
+text = "CARGANDO"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_dsqi3")
+}
+movie_quit_on_finish = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
